@@ -30,28 +30,28 @@ h2 {
   color: var(--suptitle-light-version-color);
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.2;
+  line-height: 1.36;
   text-transform: uppercase;
 }
 .dark-version-suptitle {
   /* color: var(--title-dark-version-color); */
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.2;
+  line-height: 1.36;
   text-transform: uppercase;
 }
 .title {
   color: var(--title-light-version-color);
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.05em;
 }
 .dark-version-title {
   /* color: var(--title-dark-version-color); */
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.05em;
 }
 .dark-version-text {
@@ -72,7 +72,7 @@ h2 {
   /* color: var(--title-dark-version-color); */
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -80,7 +80,7 @@ h2 {
   color: var(--button-light-version-color);
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -105,7 +105,7 @@ body {
   /* color: var(--title-dark-version-color); */
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.33;
   letter-spacing: 0.1em;
   text-decoration: none;
 }
@@ -117,7 +117,7 @@ body {
   /* color: var(--title-dark-version-color); */
   font-weight: 600;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -132,7 +132,7 @@ body {
   color: var(--suptitle-light-version-color);
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.2;
+  line-height: 1.36;
   letter-spacing: 0.2em;
 }
 .social-medias a:hover,
@@ -143,7 +143,7 @@ body {
   /* color: var(--title-dark-version-color); */
   font-weight: 700;
   font-size: 72px;
-  line-height: 1.2;
+  line-height: 1.18;
   letter-spacing: 0.05em;
 }
 /* ========== /HERO ========== */
@@ -168,14 +168,14 @@ body {
   color: var(--title-light-version-color);
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.2;
+  line-height: 1.36;
   letter-spacing: 0.05em;
 }
 .features-text {
   color: var(--title-light-version-color);
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.2;
+  line-height: 1.36;
   text-align: center;
 }
 /* ========== /FEATURES ========== */
@@ -185,14 +185,14 @@ body {
   color: var(--title-light-version-color);
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.39;
   letter-spacing: 0.02em;
 }
 .barber-funktion {
   color: var(--active-items-color);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.36;
   letter-spacing: 0.02em;
 }
 /* ========== /TEAM ========== */
@@ -233,7 +233,7 @@ body {
   color: var(--text-dark-version-color);
   font-weight: 600;
   font-size: 11px;
-  line-height: 1.2;
+  line-height: 1.36;
   letter-spacing: 0.2em;
 }
 /* ========== /FOOTER ========== */
