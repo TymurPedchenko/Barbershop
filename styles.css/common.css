@@ -1,6 +1,8 @@
 :root {
   --page-background-color: #ffffff;
   --active-items-color: #ff6c00;
+  --team-background-color: #f7f7f7;
+  --contacts-background-color: #191c26;
   /* Dark-version */
   --title-dark-version-color: #ffffff;
   --suptitle-dark-version-color: #9da4bd;
@@ -16,24 +18,38 @@
   --title-font-family: "Raleway", sans-serif;
 }
 /* ========== COMMON ========== */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  outline: 2px solid tomato;
+}
 .list {
   list-style: none;
+  margin: 0 0;
+  padding: 0 0;
 }
 .link {
   text-decoration: none;
+  display: block;
+}
+.image {
+  display: block;
 }
 h1,
 h2 {
   font-family: var(--title-font-family);
 }
-.suptitle {
+.subtitle {
   color: var(--suptitle-light-version-color);
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-.dark-version-suptitle {
+.dark-version-subtitle {
   /* color: var(--title-dark-version-color); */
   font-weight: 600;
   font-size: 11px;
@@ -46,6 +62,7 @@ h2 {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
+  margin: 0 0;
 }
 .dark-version-title {
   /* color: var(--title-dark-version-color); */
@@ -54,6 +71,14 @@ h2 {
   line-height: 1.17;
   letter-spacing: 0.05em;
 }
+.text {
+  color: var(--text-light-version-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  margin: 0 0;
+}
 .dark-version-text {
   color: var(--text-dark-version-color);
   font-weight: 400;
@@ -61,28 +86,31 @@ h2 {
   line-height: 1.67;
   letter-spacing: 0.02em;
 }
-.text {
-  color: var(--text-light-version-color);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-}
 .dark-version-button {
   /* color: var(--title-dark-version-color); */
+  background-color: transparent;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border-radius: 25px;
+  border: 2px solid var(--active-items-color);
+  display: block;
+  cursor: pointer;
 }
 .light-version-button {
-  color: var(--button-light-version-color);
+  /* color: var(--button-light-version-color); */
+  background-color: transparent;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+  border-radius: 25px;
+  border: 2px solid var(--active-items-color);
+  display: block;
+  cursor: pointer;
 }
 .dark-version-button:hover,
 .dark-version-button:focus,
@@ -101,6 +129,9 @@ body {
 /* ========== /BODY ========== */
 
 /* ========== HEADER ========== */
+.logo {
+  display: block;
+}
 .header-menu-item a {
   /* color: var(--title-dark-version-color); */
   font-weight: 600;
@@ -145,25 +176,49 @@ body {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
 }
 /* ========== /HERO ========== */
 
 /* ========== ABOUT ========== */
 .about-text {
+  margin-bottom: 42px;
+}
+.about-text-part {
   color: var(--text-light-version-color);
   font-size: 14px;
   line-height: 1.86;
   letter-spacing: 0.02em;
+  display: inline-block;
+}
+.about-title {
+  margin-bottom: 20px;
 }
 /* ========== /ABOUT ========== */
 
 /* ========== SERVICES ========== */
+.services-title {
+  margin-bottom: 44px;
+}
 .services-price {
   text-align: right;
+}
+.first-services-list,
+.second-services-list {
+  margin-bottom: 44px;
+}
+.first-services-list .services-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+.second-services-list .services-item:not(:last-child) {
+  margin-bottom: 20px;
 }
 /* ========== /SERVICES ========== */
 
 /* ========== FEATURES ========== */
+.features-item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 30px;
+}
 .features-number {
   color: var(--title-light-version-color);
   font-weight: 700;
@@ -178,15 +233,28 @@ body {
   line-height: 1.36;
   text-align: center;
 }
+.features-title {
+  margin-bottom: 20px;
+}
 /* ========== /FEATURES ========== */
 
 /* ========== TEAM ========== */
+.team {
+  background-color: var(--team-background-color);
+}
+.team-title {
+  margin-bottom: 44px;
+}
+.team-image {
+  margin-bottom: 30px;
+}
 .barber-name {
   color: var(--title-light-version-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 .barber-funktion {
   color: var(--active-items-color);
@@ -197,7 +265,25 @@ body {
 }
 /* ========== /TEAM ========== */
 
+/* ========== GALLERY ========== */
+.gallery-subtitle {
+  margin-bottom: 44px;
+}
+/* ========== /GALLERY ========== */
+
 /* ========== CONTACTS ========== */
+/* .contacts {
+  background-color: var(  --contacts-background-color)
+} */
+.contacts-booking-title {
+  margin-bottom: 44px;
+}
+.contacts-title {
+  margin-bottom: 40px;
+}
+.contacts-enumeration {
+  margin-bottom: 70px;
+}
 .contacts-address {
   color: var(--text-dark-version-color);
   font-style: normal;
@@ -235,5 +321,6 @@ body {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+  margin: 0 0;
 }
 /* ========== /FOOTER ========== */
