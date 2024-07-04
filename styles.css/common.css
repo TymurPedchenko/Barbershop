@@ -18,11 +18,13 @@
   --title-font-family: "Raleway", sans-serif;
 }
 /* ========== COMMON ========== */
+/* * {
+  outline: 2px solid tomato;
+} */
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
-  outline: 2px solid tomato;
+  padding: 120px 15px;
 }
 .list {
   list-style: none;
@@ -87,6 +89,8 @@ h2 {
   letter-spacing: 0.02em;
 }
 .dark-version-button {
+  padding: 12px 20px;
+
   /* color: var(--title-dark-version-color); */
   background-color: transparent;
   font-weight: 600;
@@ -94,12 +98,15 @@ h2 {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
   border-radius: 25px;
   border: 2px solid var(--active-items-color);
   display: block;
   cursor: pointer;
 }
 .light-version-button {
+  padding: 12px 20px;
+
   /* color: var(--button-light-version-color); */
   background-color: transparent;
   font-weight: 600;
@@ -107,6 +114,7 @@ h2 {
   line-height: 1.33;
   letter-spacing: 0.09em;
   text-transform: uppercase;
+
   border-radius: 25px;
   border: 2px solid var(--active-items-color);
   display: block;
@@ -129,8 +137,24 @@ body {
 /* ========== /BODY ========== */
 
 /* ========== HEADER ========== */
+.header-container,
+.header-container .header-nav {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+}
+.header-logo {
+  margin-right: 100px;
+}
+.header-menu {
+  display: flex;
+  align-items: center;
+}
 .logo {
   display: block;
+}
+.header-menu-item:not(:last-child) {
+  margin-right: 30px;
 }
 .header-menu-item a {
   /* color: var(--title-dark-version-color); */
@@ -151,6 +175,8 @@ body {
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: 43px;
 }
 .header-number:hover,
 .header-number:focus {
@@ -159,6 +185,13 @@ body {
 /* ========== /HEADER ========== */
 
 /* ========== HERO ========== */
+.hero-container {
+  padding: 0 15px;
+}
+.hero-social-medias {
+  display: flex;
+  gap: 40px;
+}
 .social-medias a {
   color: var(--suptitle-light-version-color);
   font-weight: 600;
@@ -181,10 +214,23 @@ body {
 /* ========== /HERO ========== */
 
 /* ========== ABOUT ========== */
+.about-container {
+  display: flex;
+  padding-right: 100px;
+}
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+.about-text-container {
+  margin-left: 30px;
+}
 .about-text {
   margin-bottom: 42px;
 }
 .about-text-part {
+  margin-top: 20px;
+
   color: var(--text-light-version-color);
   font-size: 14px;
   line-height: 1.86;
@@ -200,8 +246,22 @@ body {
 .services-title {
   margin-bottom: 44px;
 }
+.services-second-container {
+  display: flex;
+  gap: 30px;
+}
+.first-services-list {
+  flex-basis: calc(100% / 2);
+}
+.second-services-list {
+  flex-basis: calc(100% / 2);
+}
+.services-item {
+  display: flex;
+}
 .services-price {
   text-align: right;
+  margin-left: auto;
 }
 .first-services-list,
 .second-services-list {
@@ -213,13 +273,38 @@ body {
 .second-services-list .services-item:not(:last-child) {
   margin-bottom: 20px;
 }
+.services-button {
+  margin: 0 auto;
+}
 /* ========== /SERVICES ========== */
 
 /* ========== FEATURES ========== */
-.features-item:not(:nth-last-child(-n + 2)) {
-  margin-bottom: 30px;
+.features-container {
+  padding-left: 84px;
+  padding-right: 116px;
+  display: flex;
+}
+.features-second-container {
+  min-width: 500px;
+}
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-right: 130px;
+}
+.features-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 170px;
+  padding: 20px;
 }
 .features-number {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 6px;
+
   color: var(--title-light-version-color);
   font-weight: 700;
   font-size: 42px;
@@ -227,11 +312,12 @@ body {
   letter-spacing: 0.05em;
 }
 .features-text {
+  text-align: center;
+
   color: var(--title-light-version-color);
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
-  text-align: center;
 }
 .features-title {
   margin-bottom: 20px;
@@ -245,16 +331,19 @@ body {
 .team-title {
   margin-bottom: 44px;
 }
-.team-image {
-  margin-bottom: 30px;
+.team-list {
+  display: flex;
+  gap: 30px;
 }
 .barber-name {
+  padding-top: 30px;
+  margin-bottom: 8px;
+
   color: var(--title-light-version-color);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.39;
   letter-spacing: 0.02em;
-  margin-bottom: 8px;
 }
 .barber-funktion {
   color: var(--active-items-color);
@@ -269,14 +358,33 @@ body {
 .gallery-subtitle {
   margin-bottom: 44px;
 }
+.gallery-list {
+  display: flex;
+  gap: 30px;
+}
 /* ========== /GALLERY ========== */
 
 /* ========== CONTACTS ========== */
 /* .contacts {
   background-color: var(  --contacts-background-color)
 } */
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 130px 15px 111px;
+}
+.booking-container {
+  padding-left: 4px;
+}
 .contacts-booking-title {
   margin-bottom: 44px;
+}
+.contacts-button {
+  min-width: 160px;
+}
+.contacts-second-container {
+  padding-left: 105px;
+  padding-right: 197px;
 }
 .contacts-title {
   margin-bottom: 40px;
@@ -315,12 +423,26 @@ body {
 /* ========== /CONTACTS ========== */
 
 /* ========== FOOTER ========== */
+.footer-container {
+  display: flex;
+  padding: 0 15px;
+  align-items: center;
+}
+.footer-social-medias {
+  display: flex;
+  margin-left: auto;
+  gap: 40px;
+}
+.footer-link {
+  padding: 56px 0;
+}
 .copyright {
+  margin: 0 0;
+
   color: var(--text-dark-version-color);
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
-  margin: 0 0;
 }
 /* ========== /FOOTER ========== */
