@@ -3,6 +3,7 @@
   --active-items-color: #ff6c00;
   --team-background-color: #f7f7f7;
   --contacts-background-color: #191c26;
+  --transition: 300ms linear;
   /* Dark-version */
   --title-dark-version-color: #ffffff;
   --suptitle-dark-version-color: #9da4bd;
@@ -131,12 +132,14 @@ h2 {
   border: 2px solid var(--active-items-color);
   display: block;
   cursor: pointer;
+
+  transition: color var(--transition), background-color var(--transition);
 }
 
 .light-version-button {
   padding: 12px 20px;
 
-  /* color: var(--button-light-version-color); */
+  color: var(--button-light-version-color);
   background-color: transparent;
   font-weight: 600;
   font-size: 12px;
@@ -148,6 +151,7 @@ h2 {
   border: 2px solid var(--active-items-color);
   display: block;
   cursor: pointer;
+  transition: color var(--transition), background-color var(--transition);
 }
 
 .dark-version-button:is(:hover, :focus),
@@ -169,10 +173,20 @@ body {
 
 /* ========== HEADER ========== */
 
-.header-container,
-.header-container .header-nav {
+.header {
+  position: absolute;
+  top: 32px;
+  width: 100%;
+}
+
+.header-container {
   display: flex;
   padding: 0 15px;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
   align-items: center;
 }
 
@@ -193,11 +207,13 @@ body {
 .header-menu-link {
   padding: 15px 0;
 
-  /* color: var(--title-dark-version-color); */
+  color: var(--title-dark-version-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
+
+  transition: color var(--transition);
 }
 
 .header-menu-link:hover:is(:hover, :focus) {
@@ -209,12 +225,14 @@ body {
   margin-left: auto;
   margin-right: 43px;
 
-  /* color: var(--title-dark-version-color); */
+  color: var(--title-dark-version-color);
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+
+  transition: color var(--transition);
 }
 
 .header-tel:is(:hover, :focus) {
@@ -234,6 +252,7 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+  /* transform: rotate(-90deg); */
 }
 
 .hero-social::before {
@@ -250,6 +269,8 @@ body {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+
+  transition: color var(--transition);
 }
 
 .hero-social-link:is(:hover, :focus) {
@@ -490,11 +511,11 @@ body {
   border-radius: 50%;
 }
 
-.team-socia-icon {
+.team-social-icon {
   fill: #303030;
 }
 
-.team-social-link:is(:hover, :focus) .team-socia-icon {
+.team-social-link:is(:hover, :focus) .team-social-icon {
   fill: var(--active-items-color);
 }
 
@@ -575,6 +596,12 @@ body {
   margin-bottom: 70px;
 }
 
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .contacts-address {
   color: var(--text-dark-version-color);
   font-style: normal;
@@ -583,6 +610,8 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color var(--transition);
 }
 
 .contacts-tel {
@@ -593,6 +622,8 @@ body {
   line-height: 1.67;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color var(--transition);
 }
 
 .contacts-mail {
@@ -604,6 +635,14 @@ body {
   letter-spacing: 0.02em;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+
+  transition: color var(--transition);
+}
+
+.contacts-address:is(:hover, :focus),
+.contacts-tel:is(:hover, :focus),
+.contacts-mail:is(:hover, :focus) {
+  color: var(--active-items-color);
 }
 
 /* ========== /CONTACTS ========== */
@@ -639,6 +678,7 @@ body {
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
+  transition: color var(--transition);
 }
 
 .footer-social-link:is(:hover, :focus) {
