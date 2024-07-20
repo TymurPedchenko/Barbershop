@@ -467,12 +467,49 @@
       <section class="contacts">
         <div class="contacts-container container">
           <div class="booking-container">
-            <h2 class="contacts-booking-title dark-version-title title">
+            <h2 class="booking-title dark-version-title title">
               Online-booking
             </h2>
-            <button type="button" class="contacts-button dark-version-button">
-              SEND
-            </button>
+            <form class="booking-form">
+              <div class="booking-form-inputs-wrap">
+                <label class="booking-form-label">
+                  <div class="booking-form-input-wrap">
+                    <input
+                      type="text"
+                      name="user-name"
+                      placeholder="Name*"
+                      required
+                      class="booking-form-input"
+                      autofocus
+                    />
+                  </div>
+                </label>
+
+                <label class="booking-form-label">
+                  <div class="booking-form-input-wrap">
+                    <input
+                      type="tel"
+                      name="user-phone"
+                      placeholder="Phone*"
+                      required
+                      class="booking-form-input"
+                    />
+                  </div>
+                </label>
+              </div>
+
+              <label class="booking-form-label-message">
+                <textarea
+                  name="user-message"
+                  placeholder="Message"
+                  class="booking-form-textarea"
+                ></textarea>
+              </label>
+
+              <button type="submit" class="booking-button dark-version-button">
+                Send
+              </button>
+            </form>
           </div>
           <div class="contacts-second-container">
             <h2 class="contacts-title dark-version-title title">Contacts</h2>
